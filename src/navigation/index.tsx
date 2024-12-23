@@ -42,7 +42,7 @@ export function Navigation(): JSX.Element {
     <AuthStack />
   ) : (
     <Tab.Navigator
-      initialRouteName="Home"
+      // initialRouteName="Home"
       screenOptions={({ route }) => ({
         tabBarActiveTintColor: "white",
         tabBarInactiveTintColor: "#adb5bd",
