@@ -1,28 +1,50 @@
 {
   "expo": {
-    "name": "Lynx",
-    "slug": "Lynx",
-    "version": "1.0.0",
+    "name": "Netlynxs",
+    "slug": "netlynxs",
+    "version": "5.1",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icons/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/icons/icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.netlynxs.app",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "entitlements": {
+        "aps-environment": "development"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.NFC"
+      ]
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "plugins": [
+      "expo-font",
+      "react-native-nfc-manager",
+       [
+         "react-native-share",
+         {
+           "ios": ["fb", "instagram", "twitter", "tiktoksharesdk"],
+           "android": [
+             "com.facebook.katana",
+             "com.instagram.android",
+             "com.twitter.android",
+             "com.zhiliaoapp.musically"
+           ]
+         }
+       ]
+    ]
   }
 }
