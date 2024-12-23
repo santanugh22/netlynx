@@ -45,7 +45,7 @@ const EmailScreen = () => {
       title: `${fullname}'s Digital Card`,
       subject: `${fullname}'s Digital Card`,
       message: msg,
-      email: profileDetail?.personal_info?.email,
+      // email: profileDetail?.personal_info?.email,
       social: Share.Social.EMAIL,
     };
 
